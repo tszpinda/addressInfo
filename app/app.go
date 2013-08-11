@@ -1,10 +1,12 @@
 package main
 
 import (
-	address "github.com/tszpinda/addressInfo/address"
-	"code.google.com/p/gorest"
-	distance "github.com/tszpinda/addressInfo/distance"
 	"net/http"
+	"os"
+	"code.google.com/p/gorest"
+	"fmt"
+	address "github.com/tszpinda/addressInfo/address"
+	distance "github.com/tszpinda/addressInfo/distance"
 	view "github.com/tszpinda/addressInfo/web"
 )
 
@@ -23,5 +25,10 @@ func main() {
 	view.Mount()
 
 	http.Handle("/", gorest.Handle())
-	http.ListenAndServe(":8080", nil)
+	var port = os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+	fmt.Println("starting app on port: " + port)
+	http.ListenAndServe(":" + port, nil)
 }
