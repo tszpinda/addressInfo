@@ -1,13 +1,14 @@
 package main
 
 import (
-	"net/http"
-	"os"
 	"code.google.com/p/gorest"
 	"fmt"
 	address "github.com/tszpinda/addressInfo/address"
 	distance "github.com/tszpinda/addressInfo/distance"
+	keepAlive "github.com/tszpinda/addressInfo/keepAlive"
 	view "github.com/tszpinda/addressInfo/web"
+	"net/http"
+	"os"
 )
 
 func serveSingle(pattern string, filename string) {
@@ -30,5 +31,6 @@ func main() {
 		port = "8080"
 	}
 	fmt.Println("starting app on port: " + port)
-	http.ListenAndServe(":" + port, nil)
+	keepAlive.Heroku(port)
+	http.ListenAndServe(":"+port, nil)
 }
