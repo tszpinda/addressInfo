@@ -17,6 +17,8 @@ func Mount() {
  	serveSingle("/static/bootstrap/js/bootstrap.js", "./public/static/bootstrap/js/bootstrap.js")
  	serveSingle("/static/bootstrap/css/bootstrap.css", "./public/static/bootstrap/css/bootstrap.min.css")
  	serveSingle("/static/bootstrap/css/bootstrap-responsive.css", "./public/static/bootstrap/css/bootstrap-responsive.min.css")
+ 	serveSingle("/static/bootstrap/css/main.css", "./public/static/bootstrap/css/main.css")
+
 	http.HandleFunc("/index", index)
 }
 

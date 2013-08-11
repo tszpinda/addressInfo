@@ -4,6 +4,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="static/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
       <link href="static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+      <link href="static/bootstrap/css/main.css" rel="stylesheet" media="screen">
    </head>
    <body>
       <div class="row-fluid">
@@ -38,12 +39,15 @@
                      </div>
                   </div>
                   <div class="row">
-                  	<div class="span7"></div>
-                  	<div class="span5">
-								<div class="row" id="distanceResult"  style="display:none">
-				               <label class="control-label span4">Road distance:</label>
+                  	<div class="span7">
+                        <div class="control-group" id="distanceResult" style="display:none" >
+				               <label class="control-label">Road distance:</label>
 				               <div class="label label-info">3367 meters</div>
-				            </div>
+								</div>
+							</div>
+						</div>
+                  <div class="row">
+                  	<div class="span7">
 				            <div class="row" id="distanceResult2"  style="display:none">
 									<label class="control-label span4">Line distance:</label>
 									<div class="label label-info">3367 meters</div>
