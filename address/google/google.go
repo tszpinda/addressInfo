@@ -6,9 +6,9 @@ import (
 	"io/ioutil"
 	"net/http"
 	"strings"
-	"model"
 	"net/url"
 	"errors"
+	model "github.com/tszpinda/addressInfo/model"
 	filecache "github.com/tszpinda/addressInfo/address/filecache"
 )
 

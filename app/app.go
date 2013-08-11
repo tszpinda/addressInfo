@@ -5,7 +5,7 @@ import (
 	"code.google.com/p/gorest"
 	distance "github.com/tszpinda/addressInfo/distance"
 	"net/http"
-	web "github.com/tszpinda/addressInfo/web"
+	view "github.com/tszpinda/addressInfo/web"
 )
 
 func serveSingle(pattern string, filename string) {
